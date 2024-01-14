@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 1700px;
+}
+
+.scroll-watcher {
+  position: fixed;
+  top: 0;
+  height: 5px;
+  width: 100%;
+  z-index: 1000;
+  background-color: lime;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+
+
+
+.App {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+body {
+  font-size: 50px;
+}
+
+nav{
+  display: flex;
+  gap: 20px;
+}
+
+header,
+footer {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-top: 50px;
+  box-shadow: -3px -5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3), -3px -5px 5px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 50px;
+  overflow: hidden;
+}
+
+main div {
+  flex: 1;
+  height: 80%;
+  border: 2px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  Transition: all ease-in 1s;
+}
+
+main div:first-child {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+main div:last-child {
+  transform: translateX(150%);
+  opacity: 0;
+}
+
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
